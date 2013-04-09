@@ -1,26 +1,18 @@
-buildscript {
-	repositories {
-		mavenLocal()
-		mavenCentral()
-	}
-	dependencies { classpath "commons-io:commons-io:2.0.1" }
-}
+//The Java plugin adds Java compilation, testing and bundling capabilities to a project. 
+//It serves as the basis for many of the other Gradle plugins.
+apply plugin: 'java' 
 
-import org.apache.commons.io.FileUtils
-
-apply plugin: 'java'
+//The Eclipse plugin generates files that are used by the Eclipse IDE, thus making it 
+//possible to import the project into Eclipse (File - Import... - Existing Projects into Workspace)
 apply plugin: 'eclipse'
-apply plugin: 'idea'
 
+//Resositories to use
 repositories {
-	//Remote maven repo to use
-	maven { url "http://repository.jboss.org/nexus/content/groups/public" }
-	mavenLocal()
 	mavenCentral()
 }
 
-configurations { antJunit }
-
+//Java package dependencies
 dependencies {
 	compile 'junit:junit:4.10'
+	compile 'org.testng:testng:6.8.1'
 }

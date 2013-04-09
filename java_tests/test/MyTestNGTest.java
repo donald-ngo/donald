@@ -1,12 +1,12 @@
 package test;
 
-import org.junit.Test;
+import org.testng.annotations.Test;
 
 import junit.framework.Assert;
 
-public class MyTest {	
+public class MyTestNGTest {	
 	@Test
-	public void MyFirstTest() throws Exception{
+	public void MyFirstTestNGTest() throws Exception{
 		Assert.assertEquals(1, 1);
 		System.out.println("My first test.");
 	}
