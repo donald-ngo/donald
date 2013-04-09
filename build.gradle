@@ -1,0 +1,26 @@
+buildscript {
+	repositories {
+		mavenLocal()
+		mavenCentral()
+	}
+	dependencies { classpath "commons-io:commons-io:2.0.1" }
+}
+
+import org.apache.commons.io.FileUtils
+
+apply plugin: 'java'
+apply plugin: 'eclipse'
+apply plugin: 'idea'
+
+repositories {
+	//Remote maven repo to use
+	maven { url "http://repository.jboss.org/nexus/content/groups/public" }
+	mavenLocal()
+	mavenCentral()
+}
+
+configurations { antJunit }
+
+dependencies {
+	compile 'junit:junit:4.0'
+}
