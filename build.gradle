@@ -22,5 +22,5 @@ repositories {
 configurations { antJunit }
 
 dependencies {
-	compile 'junit:junit:4.0'
+	compile 'junit:junit:4.10'
 }
