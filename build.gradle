@@ -8,7 +8,7 @@ apply plugin: 'eclipse'
 
 //Resositories to use
 repositories {
-	mavenCentral()
+	mavenCentral() //http://repo1.maven.org/maven2/org/testng/testng/6.8.1/testng-6.8.1.pom
 }
 
 //Java package dependencies
