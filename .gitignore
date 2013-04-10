@@ -1,0 +1,14 @@
+gradle.properties
+bin/
+.cache/
+.loadpath
+.classpath
+.gradle/
+.project
+.pydevproject
+.settings/
+target/
+test-output/
+*.pyc
+*.class
+*runtime\.*
