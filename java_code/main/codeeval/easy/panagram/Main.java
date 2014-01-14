@@ -14,7 +14,7 @@ public class Main {
 		//File file = new File(args[0]);
 		BufferedReader in = new BufferedReader(new FileReader(file));
 		String line;
-		TreeMap<String, String> alphabet= new TreeMap();
+		TreeMap<String, String> alphabet= new TreeMap<String, String>();
 		for (int i=(int)'a';i<=(int)'z';i++){
 			alphabet.put(String.valueOf((char)i),"exists");
 		}
@@ -34,7 +34,7 @@ public class Main {
 						break;
 					}
 				}
-				Iterator iterator = copyOfAlphabet.keySet().iterator();	
+				Iterator<String> iterator = copyOfAlphabet.keySet().iterator();	
 
 				String missingLetters = "";
 				while (iterator.hasNext()){
@@ -48,5 +48,6 @@ public class Main {
 				}
 			}
 		}
+		in.close();
 	}
 }

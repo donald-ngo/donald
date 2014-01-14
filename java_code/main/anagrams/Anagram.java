@@ -34,6 +34,7 @@ public class Anagram {
 				
 				
 			}
+			s.close();
 			System.out.println("Hash map contains:" + anagramHashMap);
 			
 			List<String> findList = anagramHashMap.get(sorting(findWord));

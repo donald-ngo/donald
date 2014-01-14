@@ -14,5 +14,5 @@ repositories {
 //Java package dependencies
 dependencies {
 	compile 'junit:junit:4.10'
-	compile 'org.testng:testng:6.8.1'
+	compile 'org.testng:testng:6.8.5'
 }
