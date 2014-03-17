@@ -1,8 +1,8 @@
-//The Java plugin adds Java compilation, testing and bundling capabilities to a project. 
+//The Java plugin adds Java compilation, testing and bundling capabilities to a project.
 //It serves as the basis for many of the other Gradle plugins.
-apply plugin: 'java' 
+apply plugin: 'java'
 
-//The Eclipse plugin generates files that are used by the Eclipse IDE, thus making it 
+//The Eclipse plugin generates files that are used by the Eclipse IDE, thus making it
 //possible to import the project into Eclipse (File - Import... - Existing Projects into Workspace)
 apply plugin: 'eclipse'
 
@@ -11,8 +11,17 @@ repositories {
 	mavenCentral() //http://repo1.maven.org/maven2/org/testng/testng/6.8.1/testng-6.8.1.pom
 }
 
+configurations { antJunit }
+
 //Java package dependencies
 dependencies {
 	compile 'junit:junit:4.10'
 	compile 'org.testng:testng:6.8.5'
+}
+
+task generate_report<<{
+	ant.xslt(in: '/home/donald/source/LOAD/test_lab/test_results.jtl',
+	style: '/home/donald/source/LOAD/test_lab/jmeter-results-report_21.xsl',
+	out:   '/home/donald/source/LOAD/test_lab/test_results.html'
+	)
 }
