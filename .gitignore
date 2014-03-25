@@ -1,5 +1,6 @@
 gradle.properties
 bin/
+build/
 .cache/
 .loadpath
 .classpath
@@ -12,3 +13,4 @@ test-output/
 *.pyc
 *.class
 *runtime\.*
+
