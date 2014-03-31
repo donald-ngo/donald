@@ -19,5 +19,3 @@ for test in test_cases:
     print "floating_value:", floating_value
     print "integer_value:", integer_value
 test_cases.close()
-
-

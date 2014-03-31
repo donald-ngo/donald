@@ -18,10 +18,3 @@ dependencies {
 	compile 'junit:junit:4.10'
 	compile 'org.testng:testng:6.8.5'
 }
-
-task generate_report<<{
-	ant.xslt(in: '/home/donald/source/LOAD/test_lab/test_results.jtl',
-	style: '/home/donald/source/LOAD/test_lab/jmeter-results-report_21.xsl',
-	out:   '/home/donald/source/LOAD/test_lab/test_results.html'
-	)
-}
