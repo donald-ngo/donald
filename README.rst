@@ -1,1 +1,1 @@
-This repo will store my python training code.
+This repo will store my test code.
