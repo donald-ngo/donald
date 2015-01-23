@@ -1,42 +1,57 @@
 package playground;
 
 import java.io.BufferedReader;
+import java.io.File;
 import java.io.FileReader;
 import java.io.IOException;
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.LinkedHashMap;
 
 public class HappySequence {
 	public static int getLongestHappy(String filePath) throws IOException{
-		int longestSequence = 0;
-		int currentSum = 0;
 
 		BufferedReader bufferedReader = new BufferedReader(new FileReader(filePath));
+
+		int longestSequence = 0;
+		int sequenceCount = 0;
 		String currentLine;
 
+
+		ArrayList<String> lines = new ArrayList<String>();
+		HashMap<String,Integer> animalMap = new HashMap<String,Integer>();
+
+		//Read file into array
 		while ( (currentLine = bufferedReader.readLine()) != null){
-			String[] tempArray = currentLine.split(":");
+			lines.add(currentLine);
+		}
+
+		for (int i=0;i<lines.size();i++){
+			String[] tempArray = lines.get(i).split(":");
 			String currentKey = tempArray[0];
-			int currentValue = Integer.parseInt(tempArray[1]);
-		
-			System.out.println("I just read <token> = " + currentKey);
-			System.out.println("I just read <value> = " + currentValue);
+			int currentValue = Integer.parseInt(tempArray[1].replaceAll("\\s+",""));	
 			
-			currentSum += currentValue;
-			
-			if (currentSum > 0 ){
-				longestSequence++;
-				System.out.print("Current longestSequence is: " + longestSequence);
+			if (animalMap.containsKey(currentKey)){
+				if (animalMap.get(currentKey) + currentValue > 0)
+				{
+					animalMap.put(currentKey,animalMap.get(currentKey) + currentValue);
+					sequenceCount++;
+				}
 			}
 			else{
-				longestSequence = 0;
+				animalMap.put(currentKey,currentValue);
 			}
 		}
-		
+
+
+
 		bufferedReader.close();
 		return longestSequence;
 	}
-	
+
 	public static void main(String[] argv) throws IOException{
-		int longestSequence = getLongestHappy("./HappySequence.txt");
+		int longestSequence = getLongestHappy(System.getProperty("user.dir") + File.separator + "src" + File.separator + "main" 
+				+ File.separator + "java" + File.separator + "playground" + File.separator +  "HappySequence.txt");
 		System.out.println(longestSequence);
 	}
 }

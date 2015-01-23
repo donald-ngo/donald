@@ -1,14 +1,3 @@
- deer: 11
- unicorn: -20
- wolf: -10
- deer: -3
- wolf: 7
- lion: 1
- lion: 1
- deer: 8
- unicorn: 17
- wolf: 4
- deer: -2
- lion: -3
- wolf: 7
- deer: -6
+ dog: 3
+ cat: -1
+ dog: 2
