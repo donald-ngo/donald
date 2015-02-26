@@ -1,64 +1,56 @@
 package anagrams;
 
+import java.io.BufferedReader;
 import java.io.File;
-import java.util.ArrayList;
+import java.io.FileReader;
+import java.io.IOException;
 import java.util.Arrays;
 import java.util.HashMap;
-import java.util.List;
-import java.util.Scanner;
+import java.util.LinkedHashSet;
+import java.util.Set;
 
 public class Anagram {
-	public static void main(String[] args) {	
-		String findWord = "cat";
-		try{
-			HashMap<String, List<String>> anagramHashMap = new HashMap<String,List<String>>();
-			Scanner s = new Scanner(new File(System.getProperty("user.dir") + "/java_code/main/anagrams/input.txt"));
-			while (s.hasNext()){
-				String word = s.next().toLowerCase();
-				
-				//Change the string into char array and sort
-				String anagramSortedKey = sorting(word);
-				List<String> anagramWordList = anagramHashMap.get(anagramSortedKey);
-				
-				//{act=[cat, tac, act]}
-				//Create the list if words
-				//If there is currently no list create one
-				if (anagramWordList == null){
-					anagramHashMap.put(anagramSortedKey, anagramWordList = new ArrayList<String>());
-				}
-				
-				//Add the word to list
-				if (!anagramWordList.contains(word)){
-					anagramWordList.add(word);
-				}
-				
-				
-			}
-			s.close();
-			System.out.println("Hash map contains:" + anagramHashMap);
+	
+	public static void printAnagrams(String filename) throws IOException{
+			BufferedReader bufferedReader = new BufferedReader(new FileReader(filename));
 			
-			List<String> findList = anagramHashMap.get(sorting(findWord));
-			if (findList == null){
-				System.out.println("File contains no anagrams for: " + findWord);
+			HashMap<String, Set<String>> wordsHash = new HashMap<String, Set<String>>();	
+			
+			String currentLine;
+			
+			while ( (currentLine = bufferedReader.readLine()) != null){
+					
+					char[] originalChars = currentLine.toCharArray();
+					Arrays.sort(originalChars);
+					String sortedWord = new String(originalChars);
+					
+					if (wordsHash.containsKey(sortedWord)){
+					 wordsHash.get(sortedWord).add(currentLine);	
+					}
+					else{
+						Set<String> wordsList = new LinkedHashSet<String>();
+						wordsList.add(currentLine);
+						wordsHash.put(sortedWord, wordsList);
+					}
 			}
-			else {
-				System.out.println("File contains following anagrams words for: " + findWord);
-				for (String mystring : findList){
-					System.out.println(mystring);
+			
+			bufferedReader.close();
+			
+			System.out.print("Anagrams from the file: ");
+			
+			for (String key : wordsHash.keySet()){
+				if (wordsHash.get(key).size() > 1 ){
+					for (String word : wordsHash.get(key)){
+						System.out.print(word + " ");						
+					}
 				}
 			}
-		}
-		catch (Exception e){
-			System.out.println(e);
-			System.exit(1);
-		}
 	}
 	
-	private static String sorting(String s) {
-	    char[] a = s.toCharArray();
-	    Arrays.sort(a);
-	    return new String(a);
+	public static void main(String[] args) throws IOException{
+		String filename = System.getProperty("user.dir") + File.separator + "src" + File.separator + "main" 
+				+ File.separator + "java" + File.separator + "anagrams" + File.separator + "words.txt";		
+		printAnagrams(filename);
 	}
+
 }
-
-
