@@ -24,8 +24,10 @@ public class Anagram {
 		while ( (currentLine = bufferedReader.readLine()) != null){
 
 			char[] originalChars = currentLine.toCharArray();
+			
 			Arrays.sort(originalChars);
-			String sortedWord = new String(originalChars);
+
+			String sortedWord = String.valueOf(originalChars);
 
 			if (wordsHash.containsKey(sortedWord)){
 				wordsHash.get(sortedWord).add(currentLine);	
