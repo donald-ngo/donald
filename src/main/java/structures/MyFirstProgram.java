@@ -12,7 +12,6 @@ public class MyFirstProgram {
 		stooges.add(1,"Donald");
 		System.out.println(stooges);
 		System.out.println(stooges.getClass());
-		
 	}
 
 }
