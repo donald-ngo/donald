@@ -1,6 +1,7 @@
 package structures;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -70,8 +71,14 @@ public class MapList {
 		ml.remove(1);
 		ml.remove(2);
 		ml.getRandom();
+		
+		ml.testStrings("Donald","Ngo","Was Here");
 	}
 	
+	public void testStrings(String...strings ){
+		System.out.println("Strings are: " + Arrays.toString(strings));
+		
+	}
 	public Integer getRandom(){
 		Random rand = new Random();
 		Integer randomIndex = rand.nextInt(list.size()-1) + 0;
