@@ -3,13 +3,13 @@ package collections.lists;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collections;
-import java.util.HashMap;
+import java.util.Map;
 
 import objects.Dog;
 
 public class TestLists {
 	public static void main(String[] args) {
-		HashMap<String,Dog> testDogs = Dog.createDogs();
+		Map<String, Dog> testDogs = Dog.createDogs();
 		/******************************************
 		 *   			Arrays
 		 ****************************************/

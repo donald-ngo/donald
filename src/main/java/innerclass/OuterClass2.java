@@ -14,6 +14,7 @@ package innerclass;
 public class OuterClass2 {
 	private int x = 200;
 	
+	@SuppressWarnings("unused")
 	public void innerClassMethod(){
 		int rel = 500;
 		

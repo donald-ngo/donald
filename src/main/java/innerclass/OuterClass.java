@@ -32,6 +32,7 @@ public class OuterClass {
 		System.out.println("Inner Class Value : " + obj.ans);
 	}
 	
+	@SuppressWarnings("unused")
 	public static void main(String[] argvs){
 		OuterClass outobj = new OuterClass();
 		InnerClass inobj = outobj.new InnerClass();

@@ -1,6 +1,7 @@
 package objects;
 
 import java.util.HashMap;
+import java.util.Map;
 
 public class Dog implements Comparable<Dog> {
 	String color;
@@ -39,8 +40,8 @@ public class Dog implements Comparable<Dog> {
 		return  o.size - this.size;
 	}
 	
-	public static HashMap<String,Dog> createDogs(){
-		HashMap<String,Dog> dogHashMap = new HashMap<String,Dog>();
+	public static Map<String,Dog> createDogs(){
+		Map<String,Dog> dogHashMap = new HashMap<String,Dog>();
 		dogHashMap.put("white", new Dog("white",1));
 		dogHashMap.put("black", new Dog("black",100));
 		dogHashMap.put("yellow", new Dog("yellow",10));

@@ -1,13 +1,14 @@
 package maps;
 
 import java.util.Hashtable;
+import java.util.Map;
 import java.util.Map.Entry;
 
 import objects.Dog;
 
 public class TestHashTable {
 	public static void main(String[] args) {
-		Hashtable<Dog,Integer> hashTable = new Hashtable<Dog, Integer>();
+		Map<Dog,Integer> hashTable = new Hashtable<Dog, Integer>();
 		Dog d1 = new Dog("red", 0);
 		Dog d2 = new Dog("black", 0);
 		Dog d3 = new Dog("white", 0);

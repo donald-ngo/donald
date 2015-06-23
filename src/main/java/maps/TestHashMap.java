@@ -1,24 +1,25 @@
 package maps;
 
 import java.util.HashMap;
+import java.util.Map;
 import java.util.Map.Entry;
 
 import objects.Dog;
 
 public class TestHashMap {
 	public static void main(String[] args) {
-		HashMap<String,Dog> testDogs = Dog.createDogs();
-		HashMap<Dog,Integer> hashMap = new HashMap<Dog, Integer>();
-		hashMap.put(testDogs.get("white"), 1);
-		hashMap.put(testDogs.get("black"), 2);
-		hashMap.put(testDogs.get("yellow"), 3);
-		hashMap.put(testDogs.get("orange"), 4);
+		Map<String,Dog> testDogs = Dog.createDogs();
+		Map<Dog,Integer> map = new HashMap<Dog, Integer>();
+		map.put(testDogs.get("white"), 1);
+		map.put(testDogs.get("black"), 2);
+		map.put(testDogs.get("yellow"), 3);
+		map.put(testDogs.get("orange"), 4);
 
 		//print size
-		System.out.println("Hash map size: " + hashMap.size());
+		System.out.println("Hash map size: " + map.size());
 
 		//loop HashMap
-		for (Entry<Dog, Integer> entry : hashMap.entrySet()){
+		for (Entry<Dog, Integer> entry : map.entrySet()){
 			System.out.println(entry.getKey().toString() + " - " + entry.getValue());
 		}
 	}
