@@ -1,4 +1,4 @@
-def my_reverse(input_string):
+def reverse_string(input_string):
     my_list = list(input_string)
     i = 0
     j = len(my_list)-1
@@ -12,4 +12,4 @@ b = raw_input("Please enter a string to be reversed:")
 
 #a = {'donald','cat','tree'}
 #for words in a:
-print(my_reverse(b))
+print(reverse_string(b))
