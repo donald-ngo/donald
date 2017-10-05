@@ -1,8 +1,8 @@
-
-
-import junit.framework.Assert;
+package com.donald.demo;
 
 import org.testng.annotations.Test;
+
+import junit.framework.Assert;
 
 public class MyTestNGTest {	
 	@Test

@@ -1,4 +1,4 @@
-package objects;
+package com.donald.demo.objects;
 
 class Link{
 	public int data1;

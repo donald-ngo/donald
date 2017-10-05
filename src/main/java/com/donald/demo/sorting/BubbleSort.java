@@ -1,4 +1,4 @@
-package sorting;
+package com.donald.demo.sorting;
 
 import java.util.Arrays;
 

@@ -1,4 +1,4 @@
-package innerclass;
+package com.donald.demo.innerclass;
 
 /*
  * Local Inner Class, inside a method.

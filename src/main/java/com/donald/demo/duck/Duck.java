@@ -1,4 +1,4 @@
-package duck;
+package com.donald.demo.duck;
 
 public abstract class Duck {
 	FlyBehavior flyBehavior;

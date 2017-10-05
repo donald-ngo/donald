@@ -1,11 +1,11 @@
-package collections.sets;
+package com.donald.demo.collections.sets;
 
 import java.util.HashSet;
 import java.util.Map;
 import java.util.Set;
 import java.util.TreeSet;
 
-import objects.Dog;
+import com.donald.demo.objects.Dog;
 
 public class TestSets {
 	public static void main(String[] args) {
@@ -30,7 +30,7 @@ public class TestSets {
 		/******************************************
 		 *   			TreeSet
 		 ****************************************/
-		TreeSet<Dog> dogTreeSet = new TreeSet<Dog>();
+		Set<Dog> dogTreeSet = new TreeSet<Dog>();
 		dogTreeSet.add(dogTestHashMap.get("white"));
 		dogTreeSet.add(dogTestHashMap.get("black"));
 		dogTreeSet.add(dogTestHashMap.get("yellow"));

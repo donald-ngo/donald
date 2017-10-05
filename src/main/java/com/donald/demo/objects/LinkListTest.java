@@ -1,4 +1,4 @@
-package objects;
+package com.donald.demo.objects;
 
 public class LinkListTest {
 	public static void main(String[] args) {

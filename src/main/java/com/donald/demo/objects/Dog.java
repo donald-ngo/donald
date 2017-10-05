@@ -1,4 +1,4 @@
-package objects;
+package com.donald.demo.objects;
 
 import java.util.HashMap;
 import java.util.Map;

@@ -1,4 +1,4 @@
-package anagrams;
+package com.donald.demo.anagram;
 
 import java.util.HashMap;
 import java.util.Map;

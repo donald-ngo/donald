@@ -1,4 +1,4 @@
-package playground;
+package com.donald.demo.playground;
 
 import java.util.Enumeration;
 import java.util.Properties;

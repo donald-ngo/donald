@@ -1,9 +1,9 @@
-package maps;
+package com.donald.demo.maps;
 
 import java.util.Map.Entry;
 import java.util.TreeMap;
 
-import objects.Dog;
+import com.donald.demo.objects.Dog;
 
 public class TestTreeMap {
 	public static void main(String[] args) {

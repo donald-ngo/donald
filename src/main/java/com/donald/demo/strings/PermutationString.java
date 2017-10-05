@@ -1,4 +1,4 @@
-package strings;
+package com.donald.demo.strings;
 
 public class PermutationString{
 	public static String sort(String str){

@@ -1,4 +1,4 @@
-package structures;
+package com.donald.demo.structures;
 
 import java.util.ArrayList;
 import java.util.Arrays;

@@ -1,4 +1,4 @@
-package interviews;
+package com.donald.demo.interviews;
 
 import java.io.BufferedReader;
 import java.io.File;

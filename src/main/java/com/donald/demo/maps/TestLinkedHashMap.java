@@ -1,9 +1,9 @@
-package maps;
+package com.donald.demo.maps;
 
 import java.util.LinkedHashMap;
 import java.util.Map.Entry;
 
-import objects.Dog;
+import com.donald.demo.objects.Dog;
 
 public class TestLinkedHashMap {
 

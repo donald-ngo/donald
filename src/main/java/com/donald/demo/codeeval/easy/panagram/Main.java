@@ -1,20 +1,21 @@
-package codeeval.easy.panagram;
+package com.donald.demo.codeeval.easy.panagram;
 
 import java.io.BufferedReader;
-import java.io.File;
 import java.io.FileReader;
 import java.io.IOException;
+import java.net.URL;
 import java.util.Iterator;
 import java.util.Map;
 import java.util.TreeMap;
 
 public class Main {
 	public static void main (String[] args) throws IOException {
-		File file = new File("/home/donald/source/donald/java_code/main/codeeval/panagram/panagram.txt");
-		//File file = new File(args[0]);
-		BufferedReader in = new BufferedReader(new FileReader(file));
+		URL url = ClassLoader.getSystemResource("com/donald/demo/codeeval/easy/panagram/panagram.txt");
+		String filename = url.getPath();
+	
+		BufferedReader in = new BufferedReader(new FileReader(filename));
 		String line;
-		TreeMap<String, String> alphabet= new TreeMap<String, String>();
+		Map<String, String> alphabet= new TreeMap<String, String>();
 		for (int i=(int)'a';i<=(int)'z';i++){
 			alphabet.put(String.valueOf((char)i),"exists");
 		}

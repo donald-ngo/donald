@@ -1,4 +1,4 @@
-package duck;
+package com.donald.demo.duck;
 //Flying behavior implementation for ducks that DO fly
 public class FlyWithWings implements FlyBehavior {
 	public void fly() {

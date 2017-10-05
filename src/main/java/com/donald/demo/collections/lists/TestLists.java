@@ -1,11 +1,11 @@
-package collections.lists;
+package com.donald.demo.collections.lists;
 
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collections;
 import java.util.Map;
 
-import objects.Dog;
+import com.donald.demo.objects.Dog;
 
 public class TestLists {
 	public static void main(String[] args) {

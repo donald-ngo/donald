@@ -1,4 +1,4 @@
-package duck;
+package com.donald.demo.duck;
 
 public class Squack implements QuackBehavior {
 	public void quack(){

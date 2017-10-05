@@ -1,4 +1,4 @@
-package linkedlist;
+package com.donald.demo.linkedlist;
 
 
 public class NodeUtils {	

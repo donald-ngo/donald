@@ -1,3 +1,5 @@
+package com.donald.demo;
+
 public class BeerSong {
 	public static void main(String[] args) {
 		//setting the variables

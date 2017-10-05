@@ -1,4 +1,4 @@
-package playground;
+package com.donald.demo.playground;
 
 public class Random {
 	public static void main(String[] args){

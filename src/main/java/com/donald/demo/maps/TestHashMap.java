@@ -1,10 +1,10 @@
-package maps;
+package com.donald.demo.maps;
 
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Map.Entry;
 
-import objects.Dog;
+import com.donald.demo.objects.Dog;
 
 public class TestHashMap {
 	public static void main(String[] args) {
